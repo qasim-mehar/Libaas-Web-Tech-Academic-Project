@@ -2,33 +2,386 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pakistani Cultural Attire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cultural Wear Pakistan</title>
+  <style>
+    /* --- Reset & Base Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- Navbar --- */
+ /* --- Navbar with Glassmorphism (more transparent) --- */
+/* --- Navbar with Glassmorphism (lighter blur) --- */
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.08);    /* very transparent */
+  backdrop-filter: blur(4px) saturate(160%); /* reduced blur */
+  -webkit-backdrop-filter: blur(4px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 16px 16px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Navbar text */
+.logo, .nav-links a {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* keeps text readable */
+
+
+}
+
+.nav-links a:hover {
+  color: #e63946;
+  text-shadow: 0 1px 4px rgba(230,57,70,0.4);
+}
+.nav-links {
+  display: flex;
+  gap: 4rem;   /* wider spacing between each link */
+  font-weight: 500;
+}
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #e63946;
+    }
+
+
+
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1rem;
+      color: #fff;
+      /* Background Ajrak Image */
+      background: url('./steptodown.com482202(1).jpg') no-repeat center center/cover;
+    }
+
+    /* Semi-transparent dark overlay on hero */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .highlight {
+      color: #e63946;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #f1f1f1;
+      margin-bottom: 2rem;
+    }
+
+    /* --- CTA Button --- */
+    .cta-btn {
+      background: #e63946;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background: #d62839;
+      transform: translateY(-3px);
+    }
+  /* --- Showcase Section --- */
+.showcase {
+  padding: 5rem 2rem;
+  background: #fafafa;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.showcase-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.showcase-item:hover img {
+  transform: scale(1.05); /* gentle zoom on hover */
+}
+
+/* Overlay */
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: #fff;
+}
+
+/* Multiple font styles */
+.serif {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.3rem;
+  font-weight: bold;
+}
+
+.sans {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+.showcase-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #000000;          /* your brand red */
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+/* --- Footer --- */
+.footer {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.footer h2, .footer h3 {
+  margin-bottom: 1rem;
+  color: #070707;
+}
+
+.footer .serif {
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.footer .sans {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #070707;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e63946;
+}
+
+.footer-contact .socials {
+  margin-top: 1rem;
+}
+
+.footer-contact .socials a {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #070707;
+  transition: color 0.3s ease;
+}
+
+.footer-contact .socials a:hover {
+  color: #e63946;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav>
-    <div class="logo">
-      <h2>PakAttire</h2>
+    <div class="logo">PakCulturalWear</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Collections</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
   </nav>
 
   <!-- Hero Section -->
-  <header>
-    <h1>Celebrate Pakistan’s Culture with Every Outfit</h1>
-    <p>Discover authentic Pakistani attire designed for tradition and style.</p>
-    <a href="#" class="cta-btn">Shop Now</a>
-  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Celebrate <span class="highlight">Pakistani Culture</span></h1>
+      <p>Authentic attire that connects tradition with modern elegance. Shop from our vibrant collection of Shalwar Kameez, Kurtas, Sarees, and more.</p>
+      <button class="cta-btn">Shop Now</button>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 PakAttire. All Rights Reserved.</p>
-  </footer>
+  <!-- Showcase Section -->
+<section class="showcase">
+  <h1 class="showcase-title">Wear Your Culture with Pride</h1>
+  <div class="showcase-grid">
+
+    <!-- Card 1 -->
+    <div class="showcase-item">
+      <img src="./samir-anwari-pas0oEa__Qk-unsplash.jpg"  alt="Ajrak Shawl">
+      <div class="text-overlay">
+        <h3 class="serif">Ajrak Shawl</h3>
+        <p class="sans">Handcrafted heritage from Sindh</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="showcase-item">
+      <img src="./naseebo-lscFLrrRtWY-unsplash.jpg" alt="Kurta">
+      <div class="text-overlay">
+        <h3 class="serif">Elegant Kurtas</h3>
+        <p class="sans">Tradition with contemporary flair</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="showcase-item">
+      <img src="./samir-anwari-D2a6xxPRDtE-unsplash.jpg"  alt="Saree">
+      <div class="text-overlay">
+        <h3 class="serif">Festive Sarees</h3>
+        <p class="sans">Celebrate colors of Pakistan</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+
+    <!-- Column 1 -->
+    <div class="footer-brand">
+      <h2 class="serif">PakCulturalWear</h2>
+      <p class="sans">Draped in Heritage, Styled for Today</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-links">
+      <h3 class="serif">Explore</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-contact">
+      <h3 class="serif">Contact</h3>
+      <p class="sans">info@pakculturalwear.com</p>
+      <p class="sans">+92 300 1234567</p>
+      <div class="socials">
+        <a href="#">🌐</a>
+        <a href="#">📷</a>
+        <a href="#">👍</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom sans">
+    © 2024 PakCulturalWear — All Rights Reserved
+  </div>
+</footer>
+
 </body>
 </html>

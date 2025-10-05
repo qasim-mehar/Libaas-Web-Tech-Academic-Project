@@ -1,82 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - PakAttire</title>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <h2>PakAttire</h2>
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- About Section -->
-  <section>
-    <h1>About PakAttire</h1>
-    <p>
-      At PakAttire, we believe in celebrating Pakistan’s rich culture through clothing.
-      Our mission is to provide authentic traditional attire that connects the new generation
-      with the timeless beauty of heritage.
-    </p>
-    <p>
-      From shalwar kameez to handcrafted shawls, every piece in our collection
-      is a story of tradition, artistry, and identity.
-    </p>
-  </section>
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #111;
+  background-color: #fff;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 PakAttire. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - PakAttire</title>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <h2>PakAttire</h2>
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+header,
+footer {
+  padding-block: 2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #0f4b60 0%, #06436d 100%);
+}
 
-  <!-- About Section -->
-  <section>
-    <h1>About PakAttire</h1>
-    <p>
-      At PakAttire, we believe in celebrating Pakistan’s rich culture through clothing.
-      Our mission is to provide authentic traditional attire that connects the new generation
-      with the timeless beauty of heritage.
-    </p>
-    <p>
-      From shalwar kameez to handcrafted shawls, every piece in our collection
-      is a story of tradition, artistry, and identity.
-    </p>
-  </section>
+main,
+.page-width {
+  max-width: 900px;
+  padding-inline: 3rem;
+  margin-inline: auto;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 PakAttire. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+main {
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: start;
+  gap: 2rem;
+
+  /* overflow: visible; */
+}
+
+aside {
+  position: sticky;
+  top: 2rem;
+
+  /* background-color: lightblue; */
+}
+
+.widget {
+  min-height: 250px;
+  border-radius: 8px;
+}
+
+.widget:not(:last-child) {
+  margin-block-end: 1rem;
+}
+
+.widget.golden {
+  background: repeating-linear-gradient(
+    45deg,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.widget.blue {
+  background: repeating-linear-gradient(
+    45deg,
+    #8391ea,
+    #8391ea 10px,
+    #616ebc 10px,
+    #616ebc 20px
+  );
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  margin-block-end: 1em;
+}
+
+</style>
+<header>
+  <div class="page-width">
+    <h1>CSS Position Sticky</h1>
+  </div>
+</header>
+
+<main>
+
+
+  <article>
+    <aside>
+    <div class="widget golden"></div>
+    <div class="widget blue"></div>
+  </aside>
+   <img src="./steptodown.com482202(1).jpg"alt="">
+   <img src="./steptodown.com482202(1).jpg"alt="">
+  </article>
+</main>
+
+<footer>
+  <div class="page-width">
+    This is footer.
+  </div>
+</footer>
